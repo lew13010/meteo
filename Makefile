@@ -157,7 +157,7 @@ load-fixtures: ## Build the DB, control the schema validity, load fixtures and c
 	$(SYMFONY) doctrine:schema:drop --force
 	$(SYMFONY) doctrine:schema:create
 	$(SYMFONY) doctrine:schema:validate
-	$(SYMFONY) hautelook:fixtures:load --no-interaction
+	$(SYMFONY) doctrine:fixtures:load --no-interaction
 
 init-snippet: ## Initialize a new snippet
 	$(SYMFONY) $(PROJECT):init-snippet
