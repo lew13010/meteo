@@ -94,10 +94,7 @@ jobs:
 
             ## —— Tests ✅ ———————————————————————————————————————————————————————————
             - name: Load Doctrine fixtures
-              run: |
-                  make load-fixtures
+              run: make load-fixtures
 
             - name: Run functionnal and unit tests
-              run: |
-                  cp phpunit.xml.ci phpunit.xml
-                  ./vendor/bin/phpunit --testsuite='main'
+              run: ./vendor/bin/phpunit
