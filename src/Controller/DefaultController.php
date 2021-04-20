@@ -19,4 +19,10 @@ class DefaultController extends AbstractController
     {
         return $this->render('default/index.html.twig');
     }
+
+    #[Route('/second', name: 'second')]
+    public function second(): Response
+    {
+        return $this->render('default/index.html.twig');
+    }
 }
